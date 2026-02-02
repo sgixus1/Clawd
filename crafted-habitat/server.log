@@ -1,0 +1,722 @@
+[SQLite] Database path: /root/.openclaw/workspace/crafted-habitat-refactor/data/database.sqlite
+[Server] Crafted Habitat backend running on http://localhost:5000
+[Server] Health check: http://localhost:5000/api/health
+[Server] SQLite database: /root/.openclaw/workspace/crafted-habitat-refactor/data/database.sqlite
+[SQLite] Schema initialized successfully
+[Sequelize] Executing (default): SELECT 1+1 AS result
+[Sequelize] Connection established successfully.
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='workers';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`workers`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`workers`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`workers`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`workers`)
+[Sequelize] Executing (default): ALTER TABLE `workers` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `workers` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`workers`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`workers`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`workers`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `workers_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `workers_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `workers`;
+[Sequelize] Executing (default): DROP TABLE `workers`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `workers` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `workers` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `workers_backup`;
+[Sequelize] Executing (default): DROP TABLE `workers_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`workers`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`workers`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`workers`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `workers_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `workers_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `workers`;
+[Sequelize] Executing (default): DROP TABLE `workers`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `workers` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `workers` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `workers_backup`;
+[Sequelize] Executing (default): DROP TABLE `workers_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`workers`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='invoices';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`invoices`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`invoices`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`invoices`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`invoices`)
+[Sequelize] Executing (default): ALTER TABLE `invoices` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `invoices` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`invoices`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`invoices`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`invoices`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `invoices_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `invoices_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `invoices`;
+[Sequelize] Executing (default): DROP TABLE `invoices`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `invoices` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `invoices` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `invoices_backup`;
+[Sequelize] Executing (default): DROP TABLE `invoices_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`invoices`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`invoices`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`invoices`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `invoices_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `invoices_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `invoices`;
+[Sequelize] Executing (default): DROP TABLE `invoices`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `invoices` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `invoices` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `invoices_backup`;
+[Sequelize] Executing (default): DROP TABLE `invoices_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`invoices`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='transactions';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`transactions`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`transactions`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`transactions`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`transactions`)
+[Sequelize] Executing (default): ALTER TABLE `transactions` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `transactions` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`transactions`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`transactions`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`transactions`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `transactions_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `transactions_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `transactions`;
+[Sequelize] Executing (default): DROP TABLE `transactions`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `transactions` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `transactions` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `transactions_backup`;
+[Sequelize] Executing (default): DROP TABLE `transactions_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`transactions`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`transactions`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`transactions`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `transactions_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `transactions_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `transactions`;
+[Sequelize] Executing (default): DROP TABLE `transactions`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `transactions` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `transactions` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `transactions_backup`;
+[Sequelize] Executing (default): DROP TABLE `transactions_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`transactions`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='attendance';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`attendance`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`attendance`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`attendance`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`attendance`)
+[Sequelize] Executing (default): ALTER TABLE `attendance` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `attendance` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`attendance`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`attendance`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`attendance`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `attendance_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `attendance_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `attendance`;
+[Sequelize] Executing (default): DROP TABLE `attendance`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `attendance` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `attendance` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `attendance_backup`;
+[Sequelize] Executing (default): DROP TABLE `attendance_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`attendance`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`attendance`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`attendance`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `attendance_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `attendance_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `attendance`;
+[Sequelize] Executing (default): DROP TABLE `attendance`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `attendance` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `attendance` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `attendance_backup`;
+[Sequelize] Executing (default): DROP TABLE `attendance_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`attendance`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='leaves';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`leaves`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`leaves`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`leaves`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`leaves`)
+[Sequelize] Executing (default): ALTER TABLE `leaves` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `leaves` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`leaves`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`leaves`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`leaves`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `leaves_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `leaves_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `leaves`;
+[Sequelize] Executing (default): DROP TABLE `leaves`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `leaves` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `leaves` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `leaves_backup`;
+[Sequelize] Executing (default): DROP TABLE `leaves_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`leaves`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`leaves`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`leaves`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `leaves_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `leaves_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `leaves`;
+[Sequelize] Executing (default): DROP TABLE `leaves`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `leaves` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `leaves` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `leaves_backup`;
+[Sequelize] Executing (default): DROP TABLE `leaves_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`leaves`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='payroll_runs';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`payroll_runs`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`payroll_runs`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`payroll_runs`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`payroll_runs`)
+[Sequelize] Executing (default): ALTER TABLE `payroll_runs` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `payroll_runs` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`payroll_runs`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`payroll_runs`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`payroll_runs`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `payroll_runs_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `payroll_runs_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `payroll_runs`;
+[Sequelize] Executing (default): DROP TABLE `payroll_runs`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `payroll_runs` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `payroll_runs` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `payroll_runs_backup`;
+[Sequelize] Executing (default): DROP TABLE `payroll_runs_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`payroll_runs`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`payroll_runs`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`payroll_runs`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `payroll_runs_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `payroll_runs_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `payroll_runs`;
+[Sequelize] Executing (default): DROP TABLE `payroll_runs`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `payroll_runs` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `payroll_runs` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `payroll_runs_backup`;
+[Sequelize] Executing (default): DROP TABLE `payroll_runs_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`payroll_runs`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='reminders';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`reminders`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`reminders`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`reminders`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`reminders`)
+[Sequelize] Executing (default): ALTER TABLE `reminders` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `reminders` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`reminders`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`reminders`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`reminders`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `reminders_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `reminders_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `reminders`;
+[Sequelize] Executing (default): DROP TABLE `reminders`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `reminders` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `reminders` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `reminders_backup`;
+[Sequelize] Executing (default): DROP TABLE `reminders_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`reminders`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`reminders`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`reminders`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `reminders_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `reminders_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `reminders`;
+[Sequelize] Executing (default): DROP TABLE `reminders`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `reminders` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `reminders` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `reminders_backup`;
+[Sequelize] Executing (default): DROP TABLE `reminders_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`reminders`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='company_profiles';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`company_profiles`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`company_profiles`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`company_profiles`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`company_profiles`)
+[Sequelize] Executing (default): ALTER TABLE `company_profiles` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `company_profiles` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`company_profiles`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`company_profiles`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`company_profiles`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `company_profiles_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `company_profiles_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `company_profiles`;
+[Sequelize] Executing (default): DROP TABLE `company_profiles`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `company_profiles` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `company_profiles` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `company_profiles_backup`;
+[Sequelize] Executing (default): DROP TABLE `company_profiles_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`company_profiles`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`company_profiles`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`company_profiles`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `company_profiles_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `company_profiles_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `company_profiles`;
+[Sequelize] Executing (default): DROP TABLE `company_profiles`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `company_profiles` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `company_profiles` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `company_profiles_backup`;
+[Sequelize] Executing (default): DROP TABLE `company_profiles_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`company_profiles`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='vouchers';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`vouchers`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`vouchers`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`vouchers`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`vouchers`)
+[Sequelize] Executing (default): ALTER TABLE `vouchers` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `vouchers` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`vouchers`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`vouchers`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`vouchers`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `vouchers_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `vouchers_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `vouchers`;
+[Sequelize] Executing (default): DROP TABLE `vouchers`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `vouchers` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `vouchers` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `vouchers_backup`;
+[Sequelize] Executing (default): DROP TABLE `vouchers_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`vouchers`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`vouchers`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`vouchers`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `vouchers_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `vouchers_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `vouchers`;
+[Sequelize] Executing (default): DROP TABLE `vouchers`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `vouchers` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `vouchers` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `vouchers_backup`;
+[Sequelize] Executing (default): DROP TABLE `vouchers_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`vouchers`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='milestones';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`milestones`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`milestones`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`milestones`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`milestones`)
+[Sequelize] Executing (default): ALTER TABLE `milestones` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `milestones` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`milestones`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`milestones`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`milestones`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `milestones_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `milestones_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `milestones`;
+[Sequelize] Executing (default): DROP TABLE `milestones`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `milestones` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `milestones` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `milestones_backup`;
+[Sequelize] Executing (default): DROP TABLE `milestones_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`milestones`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`milestones`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`milestones`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `milestones_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `milestones_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `milestones`;
+[Sequelize] Executing (default): DROP TABLE `milestones`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `milestones` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `milestones` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `milestones_backup`;
+[Sequelize] Executing (default): DROP TABLE `milestones_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`milestones`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='crm_data';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`crm_data`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`crm_data`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`crm_data`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`crm_data`)
+[Sequelize] Executing (default): ALTER TABLE `crm_data` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `crm_data` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`crm_data`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`crm_data`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`crm_data`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `crm_data_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `crm_data_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `crm_data`;
+[Sequelize] Executing (default): DROP TABLE `crm_data`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `crm_data` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `crm_data` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `crm_data_backup`;
+[Sequelize] Executing (default): DROP TABLE `crm_data_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`crm_data`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`crm_data`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`crm_data`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `crm_data_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `crm_data_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `crm_data`;
+[Sequelize] Executing (default): DROP TABLE `crm_data`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `crm_data` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `crm_data` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `crm_data_backup`;
+[Sequelize] Executing (default): DROP TABLE `crm_data_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`crm_data`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='active_clockins';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`active_clockins`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`active_clockins`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`active_clockins`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`active_clockins`)
+[Sequelize] Executing (default): ALTER TABLE `active_clockins` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `active_clockins` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`active_clockins`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`active_clockins`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`active_clockins`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `active_clockins_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `active_clockins_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `active_clockins`;
+[Sequelize] Executing (default): DROP TABLE `active_clockins`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `active_clockins` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `active_clockins` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `active_clockins_backup`;
+[Sequelize] Executing (default): DROP TABLE `active_clockins_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`active_clockins`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`active_clockins`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`active_clockins`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `active_clockins_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `active_clockins_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `active_clockins`;
+[Sequelize] Executing (default): DROP TABLE `active_clockins`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `active_clockins` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `active_clockins` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `active_clockins_backup`;
+[Sequelize] Executing (default): DROP TABLE `active_clockins_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`active_clockins`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='checklist';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`checklist`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`checklist`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`checklist`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`checklist`)
+[Sequelize] Executing (default): ALTER TABLE `checklist` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `checklist` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`checklist`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`checklist`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`checklist`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `checklist_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `checklist_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `checklist`;
+[Sequelize] Executing (default): DROP TABLE `checklist`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `checklist` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `checklist` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `checklist_backup`;
+[Sequelize] Executing (default): DROP TABLE `checklist_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`checklist`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`checklist`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`checklist`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `checklist_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `checklist_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `checklist`;
+[Sequelize] Executing (default): DROP TABLE `checklist`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `checklist` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `checklist` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `checklist_backup`;
+[Sequelize] Executing (default): DROP TABLE `checklist_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`checklist`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='payments';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`payments`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`payments`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`payments`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`payments`)
+[Sequelize] Executing (default): ALTER TABLE `payments` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `payments` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`payments`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`payments`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`payments`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `payments_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `payments_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `payments`;
+[Sequelize] Executing (default): DROP TABLE `payments`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `payments` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `payments` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `payments_backup`;
+[Sequelize] Executing (default): DROP TABLE `payments_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`payments`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`payments`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`payments`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `payments_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `payments_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `payments`;
+[Sequelize] Executing (default): DROP TABLE `payments`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `payments` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `payments` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `payments_backup`;
+[Sequelize] Executing (default): DROP TABLE `payments_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`payments`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='vos';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`vos`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`vos`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`vos`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`vos`)
+[Sequelize] Executing (default): ALTER TABLE `vos` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `vos` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`vos`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`vos`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`vos`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `vos_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `vos_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `vos`;
+[Sequelize] Executing (default): DROP TABLE `vos`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `vos` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `vos` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `vos_backup`;
+[Sequelize] Executing (default): DROP TABLE `vos_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`vos`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`vos`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`vos`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `vos_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `vos_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `vos`;
+[Sequelize] Executing (default): DROP TABLE `vos`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `vos` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `vos` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `vos_backup`;
+[Sequelize] Executing (default): DROP TABLE `vos_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`vos`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='quotations';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`quotations`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`quotations`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`quotations`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`quotations`)
+[Sequelize] Executing (default): ALTER TABLE `quotations` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `quotations` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`quotations`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`quotations`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`quotations`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `quotations_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `quotations_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `quotations`;
+[Sequelize] Executing (default): DROP TABLE `quotations`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `quotations` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `quotations` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `quotations_backup`;
+[Sequelize] Executing (default): DROP TABLE `quotations_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`quotations`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`quotations`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`quotations`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `quotations_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `quotations_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `quotations`;
+[Sequelize] Executing (default): DROP TABLE `quotations`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `quotations` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `quotations` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `quotations_backup`;
+[Sequelize] Executing (default): DROP TABLE `quotations_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`quotations`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='legacy_documents';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`legacy_documents`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`legacy_documents`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`legacy_documents`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`legacy_documents`)
+[Sequelize] Executing (default): ALTER TABLE `legacy_documents` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `legacy_documents` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`legacy_documents`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`legacy_documents`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`legacy_documents`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `legacy_documents_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `legacy_documents_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `legacy_documents`;
+[Sequelize] Executing (default): DROP TABLE `legacy_documents`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `legacy_documents` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `legacy_documents` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `legacy_documents_backup`;
+[Sequelize] Executing (default): DROP TABLE `legacy_documents_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`legacy_documents`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`legacy_documents`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`legacy_documents`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `legacy_documents_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `legacy_documents_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `legacy_documents`;
+[Sequelize] Executing (default): DROP TABLE `legacy_documents`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `legacy_documents` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `legacy_documents` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `legacy_documents_backup`;
+[Sequelize] Executing (default): DROP TABLE `legacy_documents_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`legacy_documents`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='policies';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`policies`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`policies`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`policies`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`policies`)
+[Sequelize] Executing (default): ALTER TABLE `policies` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `policies` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`policies`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`policies`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`policies`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `policies_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `policies_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `policies`;
+[Sequelize] Executing (default): DROP TABLE `policies`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `policies` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `policies` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `policies_backup`;
+[Sequelize] Executing (default): DROP TABLE `policies_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`policies`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`policies`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`policies`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `policies_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `policies_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `policies`;
+[Sequelize] Executing (default): DROP TABLE `policies`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `policies` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `policies` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `policies_backup`;
+[Sequelize] Executing (default): DROP TABLE `policies_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`policies`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='items';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`items`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`items`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`items`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`items`)
+[Sequelize] Executing (default): ALTER TABLE `items` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `items` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`items`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`items`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`items`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `items_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `items_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `items`;
+[Sequelize] Executing (default): DROP TABLE `items`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `items` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `items` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `items_backup`;
+[Sequelize] Executing (default): DROP TABLE `items_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`items`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`items`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`items`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `items_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `items_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `items`;
+[Sequelize] Executing (default): DROP TABLE `items`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `items` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `items` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `items_backup`;
+[Sequelize] Executing (default): DROP TABLE `items_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`items`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='clients';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`clients`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`clients`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`clients`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`clients`)
+[Sequelize] Executing (default): ALTER TABLE `clients` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `clients` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`clients`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`clients`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`clients`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `clients_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `clients_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `clients`;
+[Sequelize] Executing (default): DROP TABLE `clients`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `clients` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `clients` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `clients_backup`;
+[Sequelize] Executing (default): DROP TABLE `clients_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`clients`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`clients`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`clients`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `clients_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `clients_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `clients`;
+[Sequelize] Executing (default): DROP TABLE `clients`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `clients` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `clients` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `clients_backup`;
+[Sequelize] Executing (default): DROP TABLE `clients_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`clients`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='settings';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`settings`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`settings`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`settings`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`settings`)
+[Sequelize] Executing (default): ALTER TABLE `settings` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `settings` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`settings`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`settings`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`settings`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `settings_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `settings_backup` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `settings`;
+[Sequelize] Executing (default): DROP TABLE `settings`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `settings` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `settings` SELECT `id`, `data`, `created_at`, `createdAt`, `updatedAt` FROM `settings_backup`;
+[Sequelize] Executing (default): DROP TABLE `settings_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`settings`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`settings`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`settings`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `settings_backup` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `settings_backup` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `settings`;
+[Sequelize] Executing (default): DROP TABLE `settings`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `settings` (`id` INTEGER PRIMARY KEY, `data` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `settings` SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `settings_backup`;
+[Sequelize] Executing (default): DROP TABLE `settings_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`settings`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='media';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`media`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`media`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`media`)
+[Sequelize] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_media_1`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`media`)
+[Sequelize] Executing (default): ALTER TABLE `media` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `media` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`media`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`media`)
+[Sequelize] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_media_1`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`media`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `media_backup` (`id` TEXT UNIQUE PRIMARY KEY, `filename` VARCHAR(255) NOT NULL, `mime_type` TEXT, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `media_backup` SELECT `id`, `filename`, `mime_type`, `created_at`, `createdAt`, `updatedAt` FROM `media`;
+[Sequelize] Executing (default): DROP TABLE `media`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `media` (`id` TEXT UNIQUE PRIMARY KEY, `filename` VARCHAR(255) NOT NULL, `mime_type` TEXT, `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `media` SELECT `id`, `filename`, `mime_type`, `created_at`, `createdAt`, `updatedAt` FROM `media_backup`;
+[Sequelize] Executing (default): DROP TABLE `media_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`media`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`media`)
+[Sequelize] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_media_1`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`media`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `media_backup` (`id` TEXT UNIQUE PRIMARY KEY, `filename` VARCHAR(255) NOT NULL, `mime_type` VARCHAR(255), `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `media_backup` SELECT `id`, `filename`, `mime_type`, `created_at`, `createdAt`, `updatedAt` FROM `media`;
+[Sequelize] Executing (default): DROP TABLE `media`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `media` (`id` TEXT UNIQUE PRIMARY KEY, `filename` VARCHAR(255) NOT NULL, `mime_type` VARCHAR(255), `created_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `media` SELECT `id`, `filename`, `mime_type`, `created_at`, `createdAt`, `updatedAt` FROM `media_backup`;
+[Sequelize] Executing (default): DROP TABLE `media_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`media`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`media`)
+[Sequelize] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_media_1`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`media`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `media_backup` (`id` TEXT UNIQUE PRIMARY KEY, `filename` VARCHAR(255) NOT NULL, `mime_type` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `media_backup` SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media`;
+[Sequelize] Executing (default): DROP TABLE `media`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `media` (`id` TEXT UNIQUE PRIMARY KEY, `filename` VARCHAR(255) NOT NULL, `mime_type` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `media` SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media_backup`;
+[Sequelize] Executing (default): DROP TABLE `media_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`media`)
+[Sequelize] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_media_1`)
+[Sequelize] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='projects';
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`projects`);
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`projects`)
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`projects`)
+[Sequelize] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_projects_1`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`projects`)
+[Sequelize] Executing (default): ALTER TABLE `projects` ADD `createdAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): ALTER TABLE `projects` ADD `updatedAt` DATETIME NOT NULL;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`projects`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`projects`)
+[Sequelize] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_projects_1`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`projects`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `projects_backup` (`id` TEXT UNIQUE PRIMARY KEY, `projectData` TEXT NOT NULL, `updated_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `projects_backup` SELECT `id`, `projectData`, `updated_at`, `createdAt`, `updatedAt` FROM `projects`;
+[Sequelize] Executing (default): DROP TABLE `projects`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `projects` (`id` TEXT UNIQUE PRIMARY KEY, `projectData` TEXT NOT NULL, `updated_at` TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `projects` SELECT `id`, `projectData`, `updated_at`, `createdAt`, `updatedAt` FROM `projects_backup`;
+[Sequelize] Executing (default): DROP TABLE `projects_backup`;
+[Sequelize] Executing (default): PRAGMA TABLE_INFO(`projects`);
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`projects`)
+[Sequelize] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_projects_1`)
+[Sequelize] Executing (default): PRAGMA foreign_key_list(`projects`)
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `projects_backup` (`id` TEXT UNIQUE PRIMARY KEY, `projectData` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `projects_backup` SELECT `id`, `projectData`, `createdAt`, `updatedAt` FROM `projects`;
+[Sequelize] Executing (default): DROP TABLE `projects`;
+[Sequelize] Executing (default): CREATE TABLE IF NOT EXISTS `projects` (`id` TEXT UNIQUE PRIMARY KEY, `projectData` TEXT NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[Sequelize] Executing (default): INSERT INTO `projects` SELECT `id`, `projectData`, `createdAt`, `updatedAt` FROM `projects_backup`;
+[Sequelize] Executing (default): DROP TABLE `projects_backup`;
+[Sequelize] Executing (default): PRAGMA INDEX_LIST(`projects`)
+[Sequelize] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_projects_1`)
+[Sequelize] Database synced successfully.
+[Sequelize] Executing (default): SELECT 1 as test
+[SQLite] Database test query successful: [ [ { test: 1 } ], Statement {} ]
+[Sequelize] Executing (default): SELECT `id`, `projectData`, `createdAt`, `updatedAt` FROM `projects` AS `projects`;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `workers` AS `workers` ORDER BY `workers`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `invoices` AS `invoices` ORDER BY `invoices`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `transactions` AS `transactions` ORDER BY `transactions`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `attendance` AS `attendance` ORDER BY `attendance`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `leaves` AS `leaves` ORDER BY `leaves`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `payroll_runs` AS `payroll_runs` ORDER BY `payroll_runs`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `reminders` AS `reminders` ORDER BY `reminders`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `company_profiles` AS `company_profiles` ORDER BY `company_profiles`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `vouchers` AS `vouchers` ORDER BY `vouchers`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `milestones` AS `milestones` ORDER BY `milestones`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `crm_data` AS `crm_data` ORDER BY `crm_data`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `active_clockins` AS `active_clockins` ORDER BY `active_clockins`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `checklist` AS `checklist` ORDER BY `checklist`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `payments` AS `payments` ORDER BY `payments`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `vos` AS `vos` ORDER BY `vos`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `quotations` AS `quotations` ORDER BY `quotations`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `legacy_documents` AS `legacy_documents` ORDER BY `legacy_documents`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `policies` AS `policies` ORDER BY `policies`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `items` AS `items` ORDER BY `items`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `clients` AS `clients` ORDER BY `clients`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `settings` AS `settings` ORDER BY `settings`.`id` DESC LIMIT 1;
+[Sequelize] Executing (default): SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;
+[Sequelize] Executing (default): SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;
+[Sequelize] Executing (default): SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;
+[Sequelize] Executing (default): SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;
+[Sequelize] Executing (default): SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;
+[API GET media] Error: Error
+    at Database.<anonymous> (/root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/dialects/sqlite/query.js:185:27)
+    at /root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/dialects/sqlite/query.js:183:50
+    at new Promise (<anonymous>)
+    at Query.run (/root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/dialects/sqlite/query.js:183:12)
+    at /root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/sequelize.js:315:28
+    at async SQLiteQueryInterface.select (/root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async media.findAll (/root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/model.js:1140:21)
+    at async file:///root/.openclaw/workspace/crafted-habitat-refactor/server-fixed.js:301:19 {
+  name: 'SequelizeDatabaseError',
+  parent: [Error: SQLITE_ERROR: no such column: media.created_at] {
+    errno: 1,
+    code: 'SQLITE_ERROR',
+    sql: 'SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;'
+  },
+  original: [Error: SQLITE_ERROR: no such column: media.created_at] {
+    errno: 1,
+    code: 'SQLITE_ERROR',
+    sql: 'SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;'
+  },
+  sql: 'SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;',
+  parameters: {}
+}
+[Sequelize] Executing (default): DELETE FROM `projects`
+[Sequelize] Executing (default): INSERT INTO `projects` (`id`,`projectData`,`createdAt`,`updatedAt`) VALUES (NULL,'{"name":"Test projects","description":"Created by automated test","timestamp":"2026-02-01T23:52:57.961Z"}','2026-02-01 23:52:57.975 +00:00','2026-02-01 23:52:57.975 +00:00');
+[Sequelize] Executing (default): SELECT `id`, `projectData`, `createdAt`, `updatedAt` FROM `projects` AS `projects`;
+[Sequelize] Executing (default): DELETE FROM `workers`
+[Sequelize] Executing (default): INSERT INTO `workers` (`id`,`data`,`createdAt`,`updatedAt`) VALUES (NULL,'{"name":"Test workers","description":"Created by automated test","timestamp":"2026-02-01T23:52:57.990Z"}','2026-02-01 23:52:57.996 +00:00','2026-02-01 23:52:57.996 +00:00');
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `workers` AS `workers` ORDER BY `workers`.`id` DESC;
+[Sequelize] Executing (default): DELETE FROM `invoices`
+[Sequelize] Executing (default): INSERT INTO `invoices` (`id`,`data`,`createdAt`,`updatedAt`) VALUES (NULL,'{"name":"Test invoices","description":"Created by automated test","timestamp":"2026-02-01T23:52:58.007Z"}','2026-02-01 23:52:58.012 +00:00','2026-02-01 23:52:58.012 +00:00');
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `invoices` AS `invoices` ORDER BY `invoices`.`id` DESC;
+[Sequelize] Executing (default): DELETE FROM `settings`
+[Sequelize] Executing (default): INSERT INTO `settings` (`id`,`data`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3);
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `settings` AS `settings` ORDER BY `settings`.`id` DESC LIMIT 1;
+[Sequelize] Executing (default): DELETE FROM `projects`
+[Sequelize] Executing (default): INSERT INTO `projects` (`id`,`projectData`,`createdAt`,`updatedAt`) VALUES ('test-project-1769989978043','{"id":"test-project-1769989978043","name":"Test Construction Project","client":"Test Client","status":"planning","budget":50000,"startDate":"2026-02-01T23:52:58.043Z"}','2026-02-01 23:52:58.050 +00:00','2026-02-01 23:52:58.050 +00:00');
+[Sequelize] Executing (default): DELETE FROM `workers`
+[Sequelize] Executing (default): INSERT INTO `workers` (`id`,`data`,`createdAt`,`updatedAt`) VALUES (NULL,'{"id":"test-worker-1769989978060","name":"Test Worker","role":"Carpenter","projectId":"test-project-1769989978043","hourlyRate":25}','2026-02-01 23:52:58.067 +00:00','2026-02-01 23:52:58.067 +00:00');
+[Sequelize] Executing (default): SELECT `id`, `projectData`, `createdAt`, `updatedAt` FROM `projects` AS `projects`;
+[Sequelize] Executing (default): SELECT `id`, `data`, `createdAt`, `updatedAt` FROM `workers` AS `workers` ORDER BY `workers`.`id` DESC;
+[Sequelize] Executing (default): SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;
+[Sequelize] Executing (default): SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;
+[Sequelize] Executing (default): SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;
+[Sequelize] Executing (default): SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;
+[Sequelize] Executing (default): SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;
+[API GET media] Error: Error
+    at Database.<anonymous> (/root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/dialects/sqlite/query.js:185:27)
+    at /root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/dialects/sqlite/query.js:183:50
+    at new Promise (<anonymous>)
+    at Query.run (/root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/dialects/sqlite/query.js:183:12)
+    at /root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/sequelize.js:315:28
+    at async SQLiteQueryInterface.select (/root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async media.findAll (/root/.openclaw/workspace/crafted-habitat-refactor/node_modules/sequelize/lib/model.js:1140:21)
+    at async file:///root/.openclaw/workspace/crafted-habitat-refactor/server-fixed.js:301:19 {
+  name: 'SequelizeDatabaseError',
+  parent: [Error: SQLITE_ERROR: no such column: media.created_at] {
+    errno: 1,
+    code: 'SQLITE_ERROR',
+    sql: 'SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;'
+  },
+  original: [Error: SQLITE_ERROR: no such column: media.created_at] {
+    errno: 1,
+    code: 'SQLITE_ERROR',
+    sql: 'SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;'
+  },
+  sql: 'SELECT `id`, `filename`, `mime_type`, `createdAt`, `updatedAt` FROM `media` AS `media` ORDER BY `media`.`created_at` DESC;',
+  parameters: {}
+}

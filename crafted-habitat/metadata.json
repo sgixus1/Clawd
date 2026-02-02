@@ -1,0 +1,7 @@
+{
+  "name": "CRAFTED HABITAT",
+  "description": "Enterprise-grade construction management hub for quotations, CRM, and project tracking.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
